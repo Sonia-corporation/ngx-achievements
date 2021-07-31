@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/website",
             "index": "apps/website/src/index.html",
@@ -21,7 +23,9 @@
               "apps/website/src/favicon.ico",
               "apps/website/src/assets"
             ],
-            "styles": ["apps/website/src/styles.scss"],
+            "styles": [
+              "apps/website/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,7 +90,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/website"],
+          "outputs": [
+            "coverage/apps/website"
+          ],
           "options": {
             "jestConfig": "apps/website/jest.config.js",
             "passWithNoTests": true
@@ -109,7 +115,9 @@
         },
         "build-storybook": {
           "builder": "@nrwl/storybook:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "uiFramework": "@storybook/angular",
             "outputPath": "dist/storybook/website",
@@ -120,6 +128,25 @@
           "configurations": {
             "ci": {
               "quiet": true
+            }
+          }
+        },
+        "compodoc": {
+          "builder": "@twittwer/compodoc:compodoc",
+          "options": {
+            "tsConfig": "apps/website/tsconfig.editor.json",
+            "outputPath": "dist/compodoc/website",
+            "disableCoverage": false,
+            "disablePrivate": false,
+            "disableInternal": false
+          },
+          "configurations": {
+            "json": {
+              "exportFormat": "json"
+            },
+            "json-watch": {
+              "exportFormat": "json",
+              "watch": true
             }
           }
         }
@@ -146,13 +173,16 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/website-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/website-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
     }
   },
   "cli": {
+    "analytics": "58530ef3-3bee-4b75-8655-527d16dc6f4a",
     "defaultCollection": "@nrwl/angular"
   },
   "schematics": {

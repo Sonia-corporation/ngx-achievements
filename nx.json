@@ -19,7 +19,8 @@
           "lint",
           "test",
           "e2e",
-          "build-storybook"
+          "build-storybook",
+          "compodoc"
         ]
       }
     }
@@ -38,7 +39,9 @@
     },
     "website-e2e": {
       "tags": [],
-      "implicitDependencies": ["website"]
+      "implicitDependencies": [
+        "website"
+      ]
     }
   }
 }
