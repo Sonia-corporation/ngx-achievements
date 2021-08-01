@@ -102,6 +102,7 @@ jobs:
         with:
           coverageCommand: npm run test:website:ci:coverage
           debug: true
+          coverageLocations: ${{github.workspace}}/coverage/apps/website/lcov.info:lcov
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
   CoverageCodecov:
