@@ -39,8 +39,12 @@ jobs:
             ${{ runner.os }}-
       - name: Install dependencies
         run: npm ci
-      - name: Lint
-        run: npm run lint:all:ci
+      - name: Lint workspace static files
+        run: nx workspace-lint
+      - name: Lint website static files
+        run: npm run lint:website:ts:other:ci
+      - name: Lint website TS files
+        run: npm run lint:website:ts:ci
   Test:
     runs-on: ubuntu-latest
     strategy:
