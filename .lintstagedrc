@@ -1,5 +1,0 @@
-{
-  "*.{ts,js,md,json,yml,html}": [
-    "npm run affected:lint:all:hook"
-  ]
-}
