@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(() => {
+describe('AppComponent', (): void => {
+  beforeEach((): void => {
     TestBed.configureTestingModule({
       declarations: [AppComponent],
     });
   });
 
-  it('should create the app', () => {
+  it('should create the app', (): void => {
     const fixture = TestBed.createComponent(AppComponent);
     const component = fixture.componentInstance;
 
