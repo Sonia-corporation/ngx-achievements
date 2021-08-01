@@ -7,6 +7,7 @@ tmp
 out-tsc
 .stylelintcache
 .eslintcache
+apps/website/.eslintcache
 .cache
 .cache-jest
 reports

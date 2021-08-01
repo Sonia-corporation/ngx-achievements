@@ -9,9 +9,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/website",
             "index": "apps/website/src/index.html",
@@ -19,13 +17,8 @@
             "polyfills": "apps/website/src/polyfills.ts",
             "tsConfig": "apps/website/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "apps/website/src/favicon.ico",
-              "apps/website/src/assets"
-            ],
-            "styles": [
-              "apps/website/src/styles.scss"
-            ],
+            "assets": ["apps/website/src/favicon.ico", "apps/website/src/assets"],
+            "styles": ["apps/website/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -82,17 +75,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/website/src/**/*.ts",
-              "apps/website/src/**/*.html"
-            ]
+            "lintFilePatterns": ["apps/website/src/**/*.ts", "apps/website/src/**/*.html"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/website"
-          ],
+          "outputs": ["coverage/apps/website"],
           "options": {
             "jestConfig": "apps/website/jest.config.js",
             "passWithNoTests": true
@@ -115,9 +103,7 @@
         },
         "build-storybook": {
           "builder": "@nrwl/storybook:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "uiFramework": "@storybook/angular",
             "outputPath": "dist/storybook/website",
@@ -134,20 +120,14 @@
         "watch-storybook": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "commands": [
-              "npx nx run website:compodoc:json-watch",
-              "npx nx run website:storybook"
-            ],
+            "commands": ["npx nx run website:compodoc:json-watch", "npx nx run website:storybook"],
             "parallel": true
           }
         },
         "build-storybook-with-docs": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "commands": [
-              "npx nx run website:compodoc:json",
-              "npx nx run website:build-storybook"
-            ],
+            "commands": ["npx nx run website:compodoc:json", "npx nx run website:build-storybook"],
             "parallel": false
           }
         },
@@ -193,9 +173,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/website-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/website-e2e/**/*.{js,ts}"]
           }
         }
       }

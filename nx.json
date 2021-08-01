@@ -14,14 +14,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e",
-          "build-storybook",
-          "compodoc"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e", "build-storybook", "compodoc"]
       }
     }
   },
@@ -39,9 +32,7 @@
     },
     "website-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "website"
-      ]
+      "implicitDependencies": ["website"]
     }
   }
 }

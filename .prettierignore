@@ -9,5 +9,6 @@ dist
 dist-local-dev
 node_modules
 .eslintcache
+apps/website/.eslintcache
 package-lock.json
 coverage
