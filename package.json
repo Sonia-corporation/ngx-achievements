@@ -162,7 +162,7 @@
     "eslint-plugin-cypress": "^2.10.3",
     "husky": "^7.0.1",
     "jest": "27.0.3",
-    "jest-preset-angular": "9.0.4",
+    "jest-preset-angular": "9.0.5",
     "lint-staged": "^11.1.1",
     "nx": "^12.6.3",
     "postcss": "^8.3.5",
