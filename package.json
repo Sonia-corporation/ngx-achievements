@@ -92,8 +92,8 @@
     "lint:website:ts:ci": "nx lint website",
     "lint:website:other": "prettier --write --ignore-unknown apps/website/**/*.{md,json,yml,html}",
     "lint:website:other:ci": "prettier --check --ignore-unknown apps/website/**/*.{md,json,yml,html}",
-    "lint:all": "npm run lint:workspace && npm run lint:website:ts:other && npm run lint:website:ts",
-    "lint:all:ci": "npm run lint:workspace:ci && npm run lint:website:other:ci && npm run lint:website:ts:ci",
+    "lint:all": "npm run concurrently -- \"npm run lint:workspace\" \"npm run lint:website:other\" \"npm run lint:website:ts\" --prefix-colors green,cyan,cyan --names workspace,website,website-ts",
+    "lint:all:ci": "npm run concurrently -- \"npm run lint:workspace:ci\" \"npm run lint:website:other:ci\" \"npm run lint:website:ts:ci\" --prefix-colors green,cyan,cyan --names workspace,website,website-ts",
     "\n# UTILS SCRIPTS:": "",
     "affected": "nx affected",
     "workspace-generator": "nx workspace-generator",
@@ -110,7 +110,8 @@
     "pre-commit": "lint-staged",
     "commit-msg": "cross-env LOGGING_LEVEL=debug cz-customizable-ghooks",
     "post-commit": "git update-index --again",
-    "install-git-hooks": "husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks"
+    "install-git-hooks": "husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks",
+    "concurrently": "concurrently --kill-others-on-fail --prefix '[{name}][{time}]' --timestamp-format 'HH:mm:ss'"
   },
   "dependencies": {
     "@angular/animations": "12.1.4",
@@ -167,6 +168,7 @@
     "all-contributors-cli": "6.20.0",
     "autoprefixer": "10.3.1",
     "commitizen": "4.2.4",
+    "concurrently": "6.2.0",
     "cross-env": "7.0.3",
     "cypress": "7.7.0",
     "cz-customizable": "6.3.0",

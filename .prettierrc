@@ -6,6 +6,6 @@ quoteProps: consistent
 trailingComma: es5
 bracketSpacing: true
 arrowParens: always
-endOfLine: crlf
+endOfLine: lf
 tabWidth: 2
 
