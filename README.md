@@ -6,7 +6,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/sonia-corporation/ngx-achievements?style=flat-square)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a15731adba332ed97275/maintainability?style=flat-square)](https://codeclimate.com/github/Sonia-corporation/ngx-achievements/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/sonia-corporation/ngx-achievements/badge)](https://www.codefactor.io/repository/github/sonia-corporation/ngx-achievements)
-[![DeepScan grade](https://deepscan.io/api/teams/10568/projects/13410/branches/225363/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=10568&pid=13410&bid=225363)
+[![DeepScan grade](https://deepscan.io/api/teams/10568/projects/18090/branches/433627/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=10568&pid=18090&bid=433627)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a15731adba332ed97275/test_coverage?style=flat-square)](https://codeclimate.com/github/Sonia-corporation/ngx-achievements/test_coverage)
 [![codecov](https://codecov.io/gh/Sonia-corporation/ngx-achievements/branch/develop/graph/badge.svg?token=S4MUQF1TIY)](https://codecov.io/gh/Sonia-corporation/ngx-achievements)
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FSonia-corporation%2Fngx-achievements%2Fdevelop)](https://dashboard.stryker-mutator.io/reports/github.com/Sonia-corporation/ngx-achievements/develop)
