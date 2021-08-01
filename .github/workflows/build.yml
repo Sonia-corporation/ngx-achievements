@@ -134,12 +134,14 @@ jobs:
       - name: Test
         run: npm run test:website:ci:coverage
       - name: Coverage
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
-          flags: integration
+          flags: website
           name: Ngx-Achievements
+          verbose: true
+          directory: coverage/apps/website
   Build:
     runs-on: ubuntu-latest
     strategy:
