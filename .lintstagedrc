@@ -1,5 +1,9 @@
 {
-  "*.{ts,js,md,json,yml,html}": [
-    "npm run affected:lint:all:hook"
-  ]
+  "*.{ts,js}": [
+    "npm run affected:lint:ts:hook"
+  ],
+  "*.{md,json,yml,html}": [
+      "npm run lint:workspace",
+      "npm run affected:lint:other"
+    ]
 }

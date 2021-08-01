@@ -31,6 +31,7 @@ plugins:
     exclude_patterns:
       - '.cache/'
       - '.cache-jest/'
+      - 'apps/website/.cache-jest'
       - 'coverage/'
       - 'node_modules/'
       - '.eslintcache'
@@ -42,6 +43,7 @@ plugins:
 exclude_patterns:
   - '.cache/'
   - '.cache-jest/'
+  - 'apps/website/.cache-jest'
   - 'coverage/'
   - 'node_modules/'
   - '.eslintcache'

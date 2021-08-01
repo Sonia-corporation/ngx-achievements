@@ -1,5 +1,6 @@
 .cache
 .cache-jest
+apps/website/.cache-jest
 .git
 .github
 dist
