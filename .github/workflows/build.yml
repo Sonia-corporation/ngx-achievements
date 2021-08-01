@@ -42,7 +42,7 @@ jobs:
       - name: Lint workspace static files
         run: npm run lint:workspace
       - name: Lint website static files
-        run: npm run lint:website:ts:other:ci
+        run: npm run lint:website:other:ci
       - name: Lint website TS files
         run: npm run lint:website:ts:ci
   Test:
