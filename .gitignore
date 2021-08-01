@@ -10,6 +10,7 @@ out-tsc
 apps/website/.eslintcache
 .cache
 .cache-jest
+apps/website/.cache-jest
 reports
 
 # Only exists if Bazel was run
