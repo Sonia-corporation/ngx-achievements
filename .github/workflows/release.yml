@@ -51,10 +51,16 @@ jobs:
             ${{ runner.os }}-
       - name: Install dependencies
         run: npm ci
-      - name: Build
-        run: npm run build:website
+      - name: Website test with coverage
+        run: npm run test:website:ci:coverage
+      - name: Website build
+        run: npm run build:website:gh-pages
         env:
           CI: true
+      - name: Website Storybook
+        run: npm run storybook:build-with-docs:website:gh-pages
+      - name: Website Compodoc
+        run: npm run compodoc:website:gh-pages
       - name: Release
         run: npm run semver
         env:
