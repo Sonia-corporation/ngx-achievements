@@ -62,7 +62,8 @@
                   "with": "apps/website/src/environments/environment.prod.ts"
                 }
               ],
-              "localize": ["fr", "en"]
+              "localize": ["fr", "en"],
+              "subresourceIntegrity": true
             },
             "fr": {
               "buildOptimizer": false,
