@@ -165,7 +165,7 @@
     "jest-preset-angular": "9.0.4",
     "lint-staged": "^11.1.1",
     "nx": "^12.6.3",
-    "postcss": "^8.3.5",
+    "postcss": "8.3.6",
     "prettier": "^2.3.1",
     "semantic-release": "^17.4.4",
     "shx": "^0.3.3",
