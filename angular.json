@@ -167,6 +167,13 @@
             "parallel": false
           }
         },
+        "build-storybook-with-docs-gh-pages": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": ["npx nx run website:compodoc", "npx nx run website:build-storybook"],
+            "parallel": false
+          }
+        },
         "compodoc": {
           "builder": "@twittwer/compodoc:compodoc",
           "options": {
@@ -174,7 +181,8 @@
             "outputPath": "dist/compodoc/website",
             "disableCoverage": false,
             "disablePrivate": false,
-            "disableInternal": false
+            "disableInternal": false,
+            "unitTestCoverage": "coverage/apps/website/coverage-summary.json"
           },
           "configurations": {
             "json": {
@@ -183,6 +191,18 @@
             "json-watch": {
               "exportFormat": "json",
               "watch": true
+            },
+            "serve": {
+              "watch": true,
+              "serve": true,
+              "port": 4100
+            },
+            "gh-pages": {
+              "outputPath": "gh-pages/compodoc",
+              "baseHref": "compodoc",
+              "exportFormat": "html",
+              "disablePrivate": true,
+              "disableInternal": true
             }
           }
         }
