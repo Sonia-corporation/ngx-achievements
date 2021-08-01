@@ -1,7 +1,7 @@
 {
   "npmScope": "ngx-achievements",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "develop"
   },
   "implicitDependencies": {
     "package.json": {
