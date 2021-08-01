@@ -111,7 +111,8 @@
     "commit-msg": "cross-env LOGGING_LEVEL=debug cz-customizable-ghooks",
     "post-commit": "git update-index --again",
     "install-git-hooks": "husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks",
-    "concurrently": "concurrently --kill-others-on-fail --prefix '[{name}][{time}]' --timestamp-format 'HH:mm:ss'"
+    "concurrently": "concurrently --kill-others-on-fail --prefix '[{name}][{time}]' --timestamp-format 'HH:mm:ss'",
+    "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist -t true"
   },
   "dependencies": {
     "@angular/animations": "12.1.4",
