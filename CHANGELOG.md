@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.1](https://github.com/Sonia-corporation/ngx-achievements/compare/1.0.0...1.0.1) (2021-08-01)
+
+
+### :bug: Bug Fixes
+
+* add missing script to deploy to gh-pages ([eee2ee8](https://github.com/Sonia-corporation/ngx-achievements/commit/eee2ee8ceaee5b6f08674e0dbe7f72d7a76ef0a9))
+
 # [1.0.0](https://github.com/Sonia-corporation/ngx-achievements/compare/...1.0.0) (2021-08-01)
 
 
