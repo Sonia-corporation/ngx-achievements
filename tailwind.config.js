@@ -7,8 +7,8 @@ module.exports = {
     mode: 'jit',
     purge: {
       content: [
-        './apps/**/*.{html,ts,css,scss,sass,less,styl}',
-        './libs/**/*.{html,ts,css,scss,sass,less,styl}',
+        './apps/**/*.{html,ts,css,scss}',
+        './libs/**/*.{html,ts,css,scss}',
       ]
     },
     darkMode: 'media', // or 'media' or 'class'
