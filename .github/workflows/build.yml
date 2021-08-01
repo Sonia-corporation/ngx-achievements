@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Lint workspace static files
-        run: nx workspace-lint
+        run: npm run lint:workspace
       - name: Lint website static files
         run: npm run lint:website:ts:other:ci
       - name: Lint website TS files
