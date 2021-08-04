@@ -64,7 +64,7 @@
     "affected:build-storybook": "nx affected:build-storybook --parallel",
     "affected:dep-graph": "nx affected:dep-graph --parallel",
     "build:website": "nx run website:build --verbose",
-    "build:website:gh-pages": "nx run website:build --verbose --output-path gh-pages",
+    "build:website:gh-pages": "nx run website:build --verbose --output-path gh-pages --base-href ngx-achievements",
     "build:website:i18n": "nx run website:extract-i18n --verbose",
     "storybook:website": "nx run website:storybook",
     "storybook:watch:website": "nx run website:watch-storybook",
