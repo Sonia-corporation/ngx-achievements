@@ -170,7 +170,7 @@
         "build-storybook-with-docs-gh-pages": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "commands": ["npx nx run website:compodoc", "npx nx run website:build-storybook"],
+            "commands": ["npx nx run website:compodoc:json", "npx nx run website:build-storybook"],
             "parallel": false
           }
         },
@@ -179,10 +179,9 @@
           "options": {
             "tsConfig": "apps/website/tsconfig.editor.json",
             "outputPath": "dist/compodoc/website",
-            "disableCoverage": false,
+            "disableCoverage": true,
             "disablePrivate": false,
-            "disableInternal": false,
-            "unitTestCoverage": "coverage/apps/website/coverage-summary.json"
+            "disableInternal": false
           },
           "configurations": {
             "json": {
@@ -201,8 +200,10 @@
               "outputPath": "gh-pages/compodoc",
               "baseHref": "compodoc",
               "exportFormat": "html",
+              "disableCoverage": false,
               "disablePrivate": true,
-              "disableInternal": true
+              "disableInternal": true,
+              "unitTestCoverage": "coverage/apps/website/coverage-summary.json"
             }
           }
         }
