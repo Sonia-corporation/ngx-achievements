@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.4](https://github.com/Sonia-corporation/ngx-achievements/compare/1.0.3...1.0.4) (2021-08-04)
+
+
+### :bug: Bug Fixes
+
+* **assets:** change the base href for the gh pages production to download the assets ([1d70ecc](https://github.com/Sonia-corporation/ngx-achievements/commit/1d70ecc46ba757bf82feaae1290151bffeb4a22a))
+
 ## [1.0.3](https://github.com/Sonia-corporation/ngx-achievements/compare/1.0.2...1.0.3) (2021-08-04)
 
 
