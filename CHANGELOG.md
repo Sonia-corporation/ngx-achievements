@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [1.0.3](https://github.com/Sonia-corporation/ngx-achievements/compare/1.0.2...1.0.3) (2021-08-04)
+
+
+### :bug: Bug Fixes
+
+* build compodoc, storybook and the website as expected in the release ([d39d16e](https://github.com/Sonia-corporation/ngx-achievements/commit/d39d16e78de78006a106d0a2522392a82450ae1d))
+* **release:** fix an issue with the website storybook step ([365e95b](https://github.com/Sonia-corporation/ngx-achievements/commit/365e95bee0b7a0e21917ff84bd646cf1061a717a))
+
 ## [1.0.2](https://github.com/Sonia-corporation/ngx-achievements/compare/1.0.1...1.0.2) (2021-08-01)
 
 
