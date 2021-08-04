@@ -1,7 +1,7 @@
 module.exports = {
   '*.{ts,js}': files => {
     return [
-      `npm run affected:lint:ts:hook --files=${files.join(',')}`,
+      `npm run affected:lint:ts:hook -- --files=${files.join(',')}`,
     ];
   },
   '*.{md,json,yml,html}': [
