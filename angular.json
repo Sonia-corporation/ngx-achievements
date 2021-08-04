@@ -150,6 +150,9 @@
           "configurations": {
             "ci": {
               "quiet": true
+            },
+            "gh-pages": {
+              "outputPath": "gh-pages/ngx-achievements/storybook"
             }
           }
         },
@@ -170,7 +173,7 @@
         "build-storybook-with-docs-gh-pages": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "commands": ["npx nx run website:compodoc:json", "npx nx run website:build-storybook"],
+            "commands": ["npx nx run website:compodoc:json", "npx nx run website:build-storybook:gh-pages"],
             "parallel": false
           }
         },
@@ -197,7 +200,7 @@
               "port": 4100
             },
             "gh-pages": {
-              "outputPath": "gh-pages/compodoc",
+              "outputPath": "gh-pages/ngx-achievements/compodoc",
               "baseHref": "compodoc",
               "exportFormat": "html",
               "disableCoverage": false,
