@@ -186,7 +186,7 @@
     "husky": "7.0.1",
     "jest": "27.0.3",
     "jest-preset-angular": "9.0.4",
-    "lint-staged": "11.1.1",
+    "lint-staged": "11.1.2",
     "node-notifier": "10.0.0",
     "nx": "12.6.4",
     "open-cli": "7.0.0",
