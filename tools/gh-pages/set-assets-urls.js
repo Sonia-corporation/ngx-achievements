@@ -27,7 +27,7 @@ async function setAssetsUrls() {
       LOGGER.debug(CONTEXT, CHALK.text(`Replacing assets for ${CHALK.value(filePath)}...`));
 
       for (const asset of ASSETS) {
-        updatedContent = _.replace(updatedContent, new RegExp(asset, 'gm'), `${DEPLOY_URL_PREFIX}${asset}`);
+        updatedContent = _.replace(updatedContent, new RegExp(asset, 'gm'), `${DEPLOY_URL_PREFIX}${locale}/${asset}`);
         LOGGER.debug(CONTEXT, CHALK.text(`Asset ${CHALK.value(asset)} replaced`));
       }
 

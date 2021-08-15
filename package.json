@@ -64,7 +64,7 @@
     "affected:build-storybook": "nx affected:build-storybook --parallel",
     "affected:dep-graph": "nx affected:dep-graph --parallel",
     "build:website": "nx run website:build --verbose",
-    "build:website:gh-pages": "nx run website:build --verbose --output-path gh-pages --deploy-url deploy-url-to-replace/ && npm run build:website:gh-pages:set-deploy-url && npm run build:website:gh-pages:set-assets-url",
+    "build:website:gh-pages": "npm run clean:gh-pages && nx run website:build --verbose --output-path gh-pages --deploy-url deploy-url-to-replace/ && npm run build:website:gh-pages:set-deploy-url && npm run build:website:gh-pages:set-assets-url",
     "build:website:gh-pages:set-deploy-url": "node tools/gh-pages/set-gh-pages-deploy-urls.js",
     "build:website:gh-pages:set-assets-url": "node tools/gh-pages/set-assets-urls.js",
     "build:website:i18n": "nx run website:extract-i18n --verbose",
@@ -120,7 +120,8 @@
     "concurrently": "concurrently --kill-others-on-fail --prefix '[{name}][{time}]' --timestamp-format 'HH:mm:ss'",
     "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d gh-pages -t true",
     "deploy:locally": "node tools/gh-pages/deploy-to-gh-pages.js",
-    "one-click-deploy": "npm run build:website:gh-pages && npm run deploy:locally"
+    "one-click-deploy": "npm run build:website:gh-pages && npm run deploy:locally",
+    "clean:gh-pages": "rimraf gh-pages"
   },
   "dependencies": {
     "@angular/animations": "12.1.4",
@@ -203,6 +204,7 @@
     "open-cli": "7.0.0",
     "postcss": "8.3.5",
     "prettier": "2.3.2",
+    "rimraf": "^3.0.2",
     "semantic-release": "17.4.4",
     "shx": "0.3.3",
     "tailwindcss": "2.2.7",
