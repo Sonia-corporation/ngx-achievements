@@ -24,7 +24,7 @@
             "polyfills": "apps/website/src/polyfills.ts",
             "tsConfig": "apps/website/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/website/src/favicon.ico", "apps/website/src/assets"],
+            "assets": ["apps/website/src/favicon.ico", "apps/website/src/assets", "apps/website/src/manifest.webmanifest"],
             "styles": ["apps/website/src/styles.scss"],
             "scripts": [],
             "aot": true,
@@ -40,7 +40,9 @@
             "vendorChunk": true,
             "commonChunk": true,
             "i18nMissingTranslation": "error",
-            "localize": ["fr", "en"]
+            "localize": ["fr", "en"],
+            "serviceWorker": true,
+            "ngswConfigPath": "apps/website/ngsw-config.json"
           },
           "configurations": {
             "production": {
