@@ -4,6 +4,7 @@ const CHALK = require(`../chalk`);
 const LOGGER = require(`../logger`);
 const CONTEXT = `set-gh-pages-deploy-urls`;
 const LOCALES = ['en', 'fr'];
+const FILES = ['index.html'];
 const DEPLOY_URL_PREFIX = 'https://sonia-corporation.github.io/ngx-achievements/';
 
 async function setGhPagesDeployUrls() {
@@ -15,7 +16,7 @@ async function setGhPagesDeployUrls() {
     const dir = await FS.readdir(folderPath);
     LOGGER.debug(CONTEXT, CHALK.text(`${CHALK.value(folderPath)} read`));
 
-    for (const file of dir) {
+    for (const file of dir.filter((file) => file.includes(FILES))) {
       const filePath = `gh-pages/${locale}/${file}`;
       LOGGER.debug(CONTEXT, CHALK.text(`Reading ${CHALK.value(filePath)}...`));
       const content = await FS.readFile(filePath, {

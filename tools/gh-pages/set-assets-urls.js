@@ -5,6 +5,7 @@ const LOGGER = require(`../logger`);
 const CONTEXT = `set-assets-urls`;
 const LOCALES = ['en', 'fr'];
 const ASSETS = ['favicon.ico'];
+const FILES = ['index.html'];
 const DEPLOY_URL_PREFIX = 'https://sonia-corporation.github.io/ngx-achievements/';
 
 async function setAssetsUrls() {
@@ -16,7 +17,7 @@ async function setAssetsUrls() {
     const dir = await FS.readdir(folderPath);
     LOGGER.debug(CONTEXT, CHALK.text(`${CHALK.value(folderPath)} read`));
 
-    for (const file of dir) {
+    for (const file of dir.filter((file) => file.includes(FILES))) {
       const filePath = `gh-pages/${locale}/${file}`;
       LOGGER.debug(CONTEXT, CHALK.text(`Reading ${CHALK.value(filePath)}...`));
       let updatedContent = await FS.readFile(filePath, {
