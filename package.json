@@ -116,7 +116,9 @@
     "post-commit": "git update-index --again",
     "install-git-hooks": "husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks",
     "concurrently": "concurrently --kill-others-on-fail --prefix '[{name}][{time}]' --timestamp-format 'HH:mm:ss'",
-    "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d gh-pages -t true"
+    "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d gh-pages -t true",
+    "deploy:locally": "node tools/deploy-to-gh-pages.js",
+    "one-click-release": "npm run build:website:gh-pages && npm run deploy:locally"
   },
   "dependencies": {
     "@angular/animations": "12.1.4",
