@@ -55,5 +55,5 @@ token.json
 # System Files
 .DS_Store
 Thumbs.db
-gh-pages
+/gh-pages
 .env

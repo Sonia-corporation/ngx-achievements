@@ -9,4 +9,4 @@ node_modules
 coverage
 reports
 jest/test.ts
-gh-pages
+/gh-pages
