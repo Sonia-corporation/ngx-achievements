@@ -16,7 +16,7 @@ async function setGhPagesDeployUrls() {
     const dir = await FS.readdir(folderPath);
     LOGGER.debug(CONTEXT, CHALK.text(`${CHALK.value(folderPath)} read`));
 
-    for (const file of dir.filter((file) => file.includes(FILES))) {
+    for (const file of dir.filter((file) => FILES.includes(file))) {
       const filePath = `gh-pages/${locale}/${file}`;
       LOGGER.debug(CONTEXT, CHALK.text(`Reading ${CHALK.value(filePath)}...`));
       const content = await FS.readFile(filePath, {

@@ -4,8 +4,14 @@ const CHALK = require(`../chalk`);
 const LOGGER = require(`../logger`);
 const CONTEXT = `set-assets-urls`;
 const LOCALES = ['en', 'fr'];
-const ASSETS = ['favicon.ico'];
-const FILES = ['index.html'];
+const ASSETS = [
+  {
+    name: 'favicon.ico',
+    prepend: '/',
+  },
+  '/assets',
+];
+const FILES = ['index.html', 'manifest.webmanifest'];
 const DEPLOY_URL_PREFIX = 'https://sonia-corporation.github.io/ngx-achievements/';
 
 async function setAssetsUrls() {
@@ -17,7 +23,7 @@ async function setAssetsUrls() {
     const dir = await FS.readdir(folderPath);
     LOGGER.debug(CONTEXT, CHALK.text(`${CHALK.value(folderPath)} read`));
 
-    for (const file of dir.filter((file) => file.includes(FILES))) {
+    for (const file of dir.filter((file) => FILES.includes(file))) {
       const filePath = `gh-pages/${locale}/${file}`;
       LOGGER.debug(CONTEXT, CHALK.text(`Reading ${CHALK.value(filePath)}...`));
       let updatedContent = await FS.readFile(filePath, {
@@ -28,8 +34,17 @@ async function setAssetsUrls() {
       LOGGER.debug(CONTEXT, CHALK.text(`Replacing assets for ${CHALK.value(filePath)}...`));
 
       for (const asset of ASSETS) {
-        updatedContent = _.replace(updatedContent, new RegExp(asset, 'gm'), `${DEPLOY_URL_PREFIX}${locale}/${asset}`);
-        LOGGER.debug(CONTEXT, CHALK.text(`Asset ${CHALK.value(asset)} replaced`));
+        let prepend = `${DEPLOY_URL_PREFIX}${locale}`;
+        let assetName = asset;
+
+        if (!_.isString(asset)) {
+          prepend += asset.prepend;
+          assetName = asset.name;
+        }
+
+        const replacement = `${prepend}${assetName}`;
+        updatedContent = _.replace(updatedContent, new RegExp(assetName, 'gm'), replacement);
+        LOGGER.debug(CONTEXT, CHALK.text(`Asset ${CHALK.value(assetName)} replaced by ${CHALK.value(replacement)}`));
       }
 
       await FS.writeFile(filePath, updatedContent);
