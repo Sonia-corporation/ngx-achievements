@@ -202,7 +202,7 @@
     "lint-staged": "11.1.2",
     "node-notifier": "10.0.0",
     "nx": "12.6.6",
-    "open-cli": "7.0.0",
+    "open-cli": "7.0.1",
     "postcss": "8.3.5",
     "prettier": "2.3.2",
     "rimraf": "3.0.2",
