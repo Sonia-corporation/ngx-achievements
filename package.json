@@ -191,7 +191,7 @@
     "cz-customizable": "6.3.0",
     "cz-customizable-ghooks": "2.0.0",
     "dotenv": "10.0.0",
-    "eslint": "7.22.0",
+    "eslint": "9.2.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "2.11.3",
     "fs-extra": "9.1.0",
