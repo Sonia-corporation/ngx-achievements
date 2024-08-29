@@ -173,7 +173,7 @@
     "@tailwindcss/aspect-ratio": "0.2.1",
     "@tailwindcss/forms": "0.3.3",
     "@tailwindcss/line-clamp": "0.2.1",
-    "@tailwindcss/typography": "0.4.1",
+    "@tailwindcss/typography": "0.5.15",
     "@twittwer/compodoc": "1.5.3",
     "@types/fs-extra": "9.0.13",
     "@types/jest": "27.0.2",
