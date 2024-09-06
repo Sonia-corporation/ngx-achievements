@@ -157,7 +157,7 @@
     "@nrwl/eslint-plugin-nx": "12.7.1",
     "@nrwl/jest": "12.7.1",
     "@nrwl/linter": "12.7.1",
-    "@nrwl/nx-cloud": "12.3.10",
+    "@nrwl/nx-cloud": "19.1.0",
     "@nrwl/storybook": "12.7.1",
     "@nrwl/tao": "12.7.1",
     "@nrwl/workspace": "12.7.1",
