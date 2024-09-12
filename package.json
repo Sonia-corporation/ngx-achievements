@@ -198,7 +198,7 @@
     "gh-pages": "3.2.3",
     "husky": "7.0.2",
     "jest": "27.1.1",
-    "jest-preset-angular": "9.0.7",
+    "jest-preset-angular": "14.2.4",
     "lint-staged": "11.1.2",
     "node-notifier": "10.0.0",
     "nx": "12.6.6",
