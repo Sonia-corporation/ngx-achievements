@@ -185,7 +185,7 @@
     "autoprefixer": "10.3.6",
     "chalk": "4.1.2",
     "commitizen": "4.2.4",
-    "concurrently": "6.3.0",
+    "concurrently": "9.0.1",
     "cross-env": "7.0.3",
     "cypress": "7.7.0",
     "cz-customizable": "6.3.0",
