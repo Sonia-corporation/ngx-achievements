@@ -201,7 +201,7 @@
     "jest-preset-angular": "9.0.7",
     "lint-staged": "11.1.2",
     "node-notifier": "10.0.0",
-    "nx": "12.6.6",
+    "nx": "20.0.1",
     "open-cli": "7.0.0",
     "postcss": "8.3.5",
     "prettier": "2.3.2",
