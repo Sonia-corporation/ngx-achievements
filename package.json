@@ -47,7 +47,7 @@
   },
   "engines": {
     "node": "14.17.x",
-    "npm": "7"
+    "npm": "7.24.2"
   },
   "private": false,
   "scripts": {
