@@ -205,7 +205,7 @@
     "open-cli": "7.0.0",
     "postcss": "8.3.5",
     "prettier": "2.3.2",
-    "rimraf": "3.0.2",
+    "rimraf": "4.4.1",
     "semantic-release": "17.4.7",
     "shx": "0.3.3",
     "tailwindcss": "2.2.7",
