@@ -186,7 +186,7 @@
     "chalk": "4.1.2",
     "commitizen": "4.2.4",
     "concurrently": "6.3.0",
-    "cross-env": "7.0.3",
+    "cross-env": "10.1.0",
     "cypress": "7.7.0",
     "cz-customizable": "6.3.0",
     "cz-customizable-ghooks": "2.0.0",
